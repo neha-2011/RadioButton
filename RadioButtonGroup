@@ -1,0 +1,150 @@
+
+import java.awt.Color;
+
+
+public class radio extends javax.swing.JFrame {
+
+    
+    public radio() {
+        initComponents();
+    }
+
+                                 
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        r1 = new javax.swing.JRadioButton();
+        r2 = new javax.swing.JRadioButton();
+        r3 = new javax.swing.JRadioButton();
+        txtColor = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("jLabel1");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText("RADIO BUTTON GROUP");
+
+        buttonGroup1.add(r1);
+        r1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        r1.setText("RED");
+
+        buttonGroup1.add(r2);
+        r2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        r2.setText("BLUE");
+
+        buttonGroup1.add(r3);
+        r3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        r3.setText("GREEN");
+
+        txtColor.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtColor.setText("COLOR");
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setText("OK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(txtColor)
+                .addGap(206, 206, 206))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(r3)
+                            .addComponent(r2)
+                            .addComponent(r1))
+                        .addGap(167, 167, 167)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(106, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(263, Short.MAX_VALUE)
+                    .addComponent(jLabel1)
+                    .addContainerGap(264, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addGap(46, 46, 46)
+                .addComponent(r1)
+                .addGap(4, 4, 4)
+                .addComponent(txtColor)
+                .addGap(27, 27, 27)
+                .addComponent(r2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(r3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(158, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(174, Short.MAX_VALUE)))
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+         if(r1.isSelected() == true){
+            txtColor.setForeground(Color.red);
+        }
+        else if(r2.isSelected() == true){
+            txtColor.setForeground(Color.blue);
+        }
+        else if(r3.isSelected() == true){
+            txtColor.setForeground(Color.green);
+        }
+        
+        
+        
+    }                                        
+
+   
+    public static void main(String args[]) {
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new radio().setVisible(true);
+            }
+        });
+    }
+     
+    // Variables declaration - do not modify                     
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JRadioButton r1;
+    private javax.swing.JRadioButton r2;
+    private javax.swing.JRadioButton r3;
+    private javax.swing.JLabel txtColor;
+    // End of variables declaration                   
+}
